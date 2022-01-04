@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="E Commerce Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style>
+    .feature-bg {
+  position: relative;
+  margin: 150px 0;
+}
+
+.feature-bg:after {
+  background-image: url(images_constra/icon-image/istockphoto-1257937953-612x612-removebg-preview.png);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  content: "";
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.client-avater {
+  margin-bottom: 20px;
+}
+
+.client-meta h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.client-meta h3 span {
+  display: block;
+  font-size: 70%;
+  margin-top: 10px;
+  color: #051922;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+p.testimonial-body {
+  font-size: 17px;
+  font-style: italic;
+  width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #999999;
+  margin-top: 20px;
+}
+
+.last-icon {
+  margin-top: 20px;
+  font-size: 25px;
+  opacity: 0.3;
+}
+
+.client-avater img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.single-logo-item img {
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.logo-carousel-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email] {
+  width: 49%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.contact-form form p textarea {
+  border: 1px solid #ddd;
+  padding: 15px;
+  height: 200px;
+  border-radius: 3px;
+  width: 100%;
+  resize: none;
+}
+
+.contact-form-wrap {
+  background-color: #FBFBFB;
+  padding: 45px 30px;
+  border-radius: 5px;
+}
+
+.contact-form-box {
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.contact-form-box h4 {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.contact-form-box h4 i {
+  position: absolute;
+  left: -13%;
+  color:#ffb600;
+  top: 2px;
+}
+
+.contact-form-box p {
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.contact-form-wrap .contact-form-box:last-child {
+  margin: 0;
+}
+
+  </style>
+  <script>
+  $(function(){
+    $('.nav_head').load('templates/navbar.html');
+    });
+
+    $(function(){
+    $('.nav_foot').load('templates/footer.html');
+    });    
+var username = sessionStorage.getItem("username");
+    if (username==null)
+    {
+      alert("To access our website, you need to login first");
+      window.location="html/login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="body-inner">
+    <div class="nav_head"></div>
+<div id="banner-area" class="banner-area" style="background-image:url(images/05-Contact-Us.jpg);">
+  <div class="banner-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="banner-heading">
+                <h1 class="banner-title" style="color: black !important;">Contact</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                      <li class="breadcrumb-item"><a href="homepage.html" style="color: black !important;">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page" style="color: black !important;">Contact Us</li>
+                    </ol>
+                </nav>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div> 
+
+<br>
+<br>
+<div class="contact-from-section mt-150 mb-150">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="form-title">
+          <h2>Feel Free to write to us</h2>
+          <p>We at B2F believe to provide a good customer service along with affordability.
+            In case of any queries contact us through email or phone or fill the form below.
+          </p>
+        </div>
+         <div id="form_status"></div>
+        <div class="contact-form">
+          <form type="POST" id="fruitkha-contact" onSubmit="">
+            <p>
+              <input type="text" placeholder="Name" name="name" id="name">
+              <input type="email" placeholder="Email" name="email" id="email">
+            </p>
+            <p>
+              <input type="tel" placeholder="Phone" name="phone" id="phone">
+              <input type="text" placeholder="Subject" name="subject" id="subject">
+            </p>
+            <p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+            <input type="hidden" name="token" value="FsWga4&@f6aw" />
+            <p><input type="submit" value="Submit" style="background-color: #ffb600;border-radius: 5px;"></p>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="contact-form-wrap">
+          <div class="contact-form-box">
+            <h4><i class="fas fa-map"></i>  Address</h4>
+            <p style="color: black;">FDP-MDBP Building
+              First Floor,<br>       
+              JAVA Industrial Estate<br>
+              New Delhi-110020</p>
+          </div>
+          <div class="contact-form-box">
+            <h4><i class="fas fa-address-book"></i> Contact</h4>
+            <p style="color: black;"> Phone: +91 8308671500<br> Email: customer@b2f.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="nav_foot"></div>
+
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/slick/slick-animation.min.js"></script>
+  <script src="plugins/colorbox/jquery.colorbox.js"></script>
+  <script src="plugins/shuffle/shuffle.min.js" defer></script>
+  <script src="js/script.js"></script>
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HomePage</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="E Commerce Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style>
+    .feature-bg {
+  position: relative;
+  margin: 150px 0;
+}
+
+.feature-bg:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  content: "";
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.client-avater {
+  margin-bottom: 20px;
+}
+
+.client-meta h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.client-meta h3 span {
+  display: block;
+  font-size: 70%;
+  margin-top: 10px;
+  color: #051922;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+p.testimonial-body {
+  font-size: 17px;
+  font-style: italic;
+  width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #999999;
+  margin-top: 20px;
+}
+
+.last-icon {
+  margin-top: 20px;
+  font-size: 25px;
+  opacity: 0.3;
+}
+
+.client-avater img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.single-logo-item img {
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.logo-carousel-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.list-box .list-icon i {
+  display: block;
+  font-size: 24px;
+  margin-right: 15px;
+  color: #ffb600;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 60px;
+  border: 2px black dotted;
+  border-radius: 999px;
+}
+.product-image {
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.product-image img {
+  width: 90%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.cart-banner {
+  background-color: #f5f5f5;
+}
+
+.cart-banner .image-column {
+  position: relative;
+  margin-top: 40px;
+}
+
+.cart-banner .image-column .price-box {
+  position: absolute;
+  left: 15%;
+  top: -30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #ffb600;
+}
+
+.cart-banner .image-column .price-box .inner-price {
+  position: relative;
+  width: 94px;
+  height: 94px;
+  margin: 0 auto;
+  margin-top: 8px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ffb600;
+}
+
+.cart-banner .image-column .price-box .inner-price .price {
+  color: #051922;
+  padding-top: 27px;
+  position: relative;
+  display: inline-block;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.cart-banner .image-column .price-box .inner-price .price strong {
+  color: #051922;
+  font-size: 24px;
+}
+
+.cart-banner .content-column {
+  position: relative;
+  padding-top: 40px;
+}
+
+.cart-banner .content-column h3 {
+  font-size: 40px;
+}
+
+.cart-banner .content-column h4 {
+  position: relative;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.cart-banner .content-column .text {
+  position: relative;
+  font-weight: 400;
+  line-height: 1.8em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.shop-banner {
+  position: relative;
+  background-color: #f5f5f5;
+  background-image: url(images/ed4b3a84e0f361f56b3e37ff5fe9eb3d.jpg);
+  background-size: cover;
+  padding: 110px 0px 115px;
+}
+
+.shop-banner h3 {
+  position: relative;
+  font-size: 50px;
+  line-height: 1.2em;
+  margin-bottom: 0px;
+}
+
+.shop-banner .sale-percent {
+  position: relative;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffb600;
+}
+
+.shop-banner .sale-percent span {
+  position: relative;
+  font-size: 24px;
+  line-height: 1.1em;
+  color: #051922;
+  font-weight: 400;
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* .container_loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #ededed;
+}
+
+.loader {
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+}
+
+circle {
+  fill: none;
+  stroke-width: 3.5;
+  -webkit-animation-name: preloader;
+          animation-name: preloader;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 170px 170px;
+          transform-origin: 170px 170px;
+  will-change: transform;
+}
+circle:nth-of-type(1) {
+  stroke-dasharray: 550;
+}
+circle:nth-of-type(2) {
+  stroke-dasharray: 500;
+}
+circle:nth-of-type(3) {
+  stroke-dasharray: 450;
+}
+circle:nth-of-type(4) {
+  stroke-dasharray: 300;
+}
+circle:nth-of-type(1) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+circle:nth-of-type(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+circle:nth-of-type(3) {
+  -webkit-animation-delay: -0.45s;
+  -moz-animation-delay:  -0.45s;
+          animation-delay: -0.45s;
+}
+circle:nth-of-type(4) {
+  -webkit-animation-delay: -0.6s;
+  -moz-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+
+@-webkit-keyframes preloader {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader {
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+} */
+  </style>
+  <script>
+    $(function(){
+    $('.nav_head').load('templates/navbar.html');
+    });
+
+    $(function(){
+    $('.nav_foot').load('templates/footer.html');
+    });
+var username = sessionStorage.getItem("username");
+    if (username==null)
+    {
+      alert("To access our website, you need to login first");
+      window.location="html/login.html";
+    }
+  </script>
+</head>
+<body>
+  <!-- <div class="container_loader">
+	
+    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+       <circle cx="170" cy="170" r="160" stroke="#E2007C"/>
+       <circle cx="170" cy="170" r="135" stroke="#404041"/>
+       <circle cx="170" cy="170" r="110" stroke="#E2007C"/>
+       <circle cx="170" cy="170" r="85" stroke="#404041"/>
+    </svg>
+    
+  </div> -->
+  
+  <div class="body-inner">
+    <div class="nav_head"></div>
+    <div class="banner-carousel banner-carousel-1 mb-0">
+      <div class="banner-carousel-item" style="background-image:url(images/istockphoto-1284379612-170667a.jpg);opacity: 0.95;">
+        <div class="slider-content">
+            <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-md-12 text-center">
+                    <h2 class="slide-title" data-animation-in="slideInLeft" style="color: black;">Impacting lives of</h2>
+                    <h3 class="slide-sub-title" data-animation-in="slideInRight">1000 farmers</h3>
+                    <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                        <a href="yourcart.php" class="slider btn btn-primary border" style="color: black;">Shop Now</a>
+                        <a href="contact.html" class="slider btn btn-primary border" style="color: black;">Contact Now</a>
+                    </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+      <div class="banner-carousel-item" style="background-image:url(images/Farm-bills.jpg);opacity: 0.9;">
+        <div class="slider-content text-left">
+            <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-md-12">
+                    <h3 class="slide-title" data-animation-in="fadeIn">Everyday farm collection of</h3>
+                    <h3 class="slide-sub-title" data-animation-in="slideInLeft">120 tonnes</h3>
+                    <p data-animation-in="slideInRight">
+                        <a href="yourcart.php" class="slider btn btn-primary border" style="color: black;">SHOP NOW</a>
+                    </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+      <div class="banner-carousel-item" style="background-image:url(images/ramkumar-radhakrishnan-wikimedia-1622193304.jpeg);opacity: 0.9;">
+        <div class="slider-content text-right">
+            <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-md-12">
+                    <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Farmers</h2>
+                    <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe in reaching out to farmers</h3>
+                    <div data-animation-in="slideInLeft">
+                        <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us" >Learn more</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+<br>
+<br>
+    <div class="list-section pt-80 pb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="list-box d-flex align-items-center">
+              <div class="list-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <div class="content">
+                <h3>Free Shipping</h3>
+                <p>On orders above ₹ 250/-</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="list-box d-flex align-items-center">
+              <div class="list-icon">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <div class="content">
+                <h3>24/7 Support</h3>
+                <p>Get customer support all day</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="list-box d-flex justify-content-start align-items-center">
+              <div class="list-icon">
+                <i class="fas fa-sync"></i>
+              </div>
+              <div class="content">
+                <h3> Quick Refund</h3>
+                <p>Get refund within 3 days!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+<br>
+<br>
+    <div class="product-section mt-150 mb-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 text-center">
+            <div class="section-title">	
+              <h3><span class="orange-text">Our</span> Products</h3>
+              <p>Sourced directly from farmers and delivered at your doorstep within 72 working-hours</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="single-product-item">
+              <div class="product-image">
+                <a href="yourcart.php"><img src="images/rice.jpg" alt="" style="height: 175px;"></a>
+              </div>
+              <h3>Rice</h3>
+              <p class="product-price"><span>Per Kg</span> 20₹/- </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="single-product-item">
+              <div class="product-image">
+                <a href="yourcart.php"><img src="images/maize.jpg" alt="" style="height: 175px;"></a>
+              </div>
+              <h3>Wheat</h3>
+              <p class="product-price"><span>Per Kg</span> 30₹/- </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
+            <div class="single-product-item">
+              <div class="product-image">
+                <a href="yourcart.php"><img src="images/jowar.jpg" alt="" style="height: 175px;"></a>
+              </div>
+              <h3>Jowar</h3>
+              <p class="product-price"><span>Per Kg</span> 35₹/- </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cart-banner pt-100 pb-100">
+    	<div class="container">
+        	<div class="row clearfix">
+            	<div class="image-column col-lg-6">
+                	<div class="image">
+                    	<div class="price-box">
+                        	<div class="inner-price">
+                                <span class="price">
+                                    <strong>30%</strong> <br> off per kg
+                                </span>
+                            </div>
+                        </div>
+                    	<img src="images/rice-worlds-most-popular-grain.jpg" alt="" style="width: 450px;height: 400px;">
+                    </div>
+                </div>
+                <div class="content-column col-lg-6">
+					<h3><span class="orange-text">Deal</span> of the month</h3>
+                    <h4>Kolam Rice</h4>
+                    <div class="text">
+                      Kolam a medium-size rice grain range cultivated in lush green fields of West Bengal. It has a milder flavor and smell than the traditional Basmati Rice.
+                      On cooking leaves a floral fragrance.
+                      Kolam rice is the finest rice in the mid-price affordable segment.
+                      Complements a multitude of dishesh. A perfect fit for healthy lifestyle.
+                      Best price Kolam rice promises a sweet taste and rich aroma as each grain is naturally aged.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+<br>
+<section class="shop-banner">
+  <div class="container">
+      <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
+    </div>
+</section>
+<section class="content">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <h3 class="column-title">Happy Clients</h3>
+
+          <div id="testimonial-slide" class="testimonial-slide">
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      B2F provides good quaity products with super fastest delivery.
+                      The best part is that we have a sense of satisfaction as we contributed directly to farmers.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/21104.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Daniel Jannison</h3>
+                          <span class="quote-subtext">B2F customer</span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      B2F provides good quaity products with super fastest delivery.
+                      The best part is that we have a sense of satisfaction as we contributed directly to farmers.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/21104.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Harry Oswald</h3>
+                          <span class="quote-subtext">B2F customer</span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="quote-item">
+                    <span class="quote-text">
+                      B2F provides good quaity products with super fastest delivery.
+                      The best part is that we have a sense of satisfaction as we contributed directly to farmers.
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/21104.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Timothy Charles</h3>
+                          <span class="quote-subtext">B2F customer</span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="row all-clients">
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/1.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/2.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/3.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/4.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/5.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/1.png" alt="clients-logo" /></a>
+                </figure>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+    <div class="nav_foot"></div>
+
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/slick/slick-animation.min.js"></script>
+  <script src="plugins/colorbox/jquery.colorbox.js"></script>
+  <script src="plugins/shuffle/shuffle.min.js" defer></script>
+  <script src="js/script.js"></script>
+  </div>
+  </body>
+  </html>
